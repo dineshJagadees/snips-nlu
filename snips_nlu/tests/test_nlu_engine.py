@@ -77,7 +77,7 @@ class TestSnipsNLUEngine(FixtureTest):
                     f.write(json_string({"unit_name": self.unit_name}))
 
             @classmethod
-            def from_path(cls, path):
+            def from_path(cls, path, **shared):
                 cfg = cls.config_type()
                 return cls(cfg)
 
@@ -118,7 +118,7 @@ class TestSnipsNLUEngine(FixtureTest):
                     f.write(json_string({"unit_name": self.unit_name}))
 
             @classmethod
-            def from_path(cls, path):
+            def from_path(cls, path, **shared):
                 cfg = cls.config_type()
                 return cls(cfg)
 
@@ -210,7 +210,7 @@ class TestSnipsNLUEngine(FixtureTest):
                     f.write(json_string({"unit_name": self.unit_name}))
 
             @classmethod
-            def from_path(cls, path):
+            def from_path(cls, path, **shared):
                 cfg = cls.config_type()
                 return cls(cfg)
 
@@ -782,7 +782,7 @@ class TestIntentParser1(IntentParser):
             f.write(json_string({"unit_name": self.unit_name}))
 
     @classmethod
-    def from_path(cls, path):
+    def from_path(cls, path, **shared):
         cfg = cls.config_type()
         return cls(cfg)
 
@@ -823,6 +823,6 @@ class TestIntentParser2(IntentParser):
             f.write(json_string({"unit_name": self.unit_name}))
 
     @classmethod
-    def from_path(cls, path):
+    def from_path(cls, path, **shared):
         cfg = cls.config_type()
         return cls(cfg)
